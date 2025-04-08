@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Exercise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .head {
+            text-align: center;
+            padding: 30px;
+            font-size: 60px;
+        }
+
+        .subtitle {
+            text-align: center;
+        }
+
+        .input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 25px;
+            background: rgb(243, 241, 241);
+            width: 600px;
+        }
+
+        .flex-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 25px;
+        }
+
+
+        .input:hover {
+            outline: none;
+        }
+         .input::placeholder {
+            color: black;
+        }
+        .option {
+            color: rgb(68, 65, 65);
+            padding: 10px;
+        }
+        .t {
+            color: black;
+            background: rgb(243, 241, 241);
+            padding: 10px;
+            border-radius: 25px;
+
+        }
+        .t{
+            text-decoration: none;
+        }
+
+        .button {
+            background: rgb(190, 17, 46);
+            color: white;
+            padding: 13px;
+            border-radius: 50px;
+            border: none;
+
+            position: absolute;
+            top: 40.5%;
+            right: 28.5%;
+            cursor: pointer;
+
+        }
+
+    </style>
+
+    <h1 class="head">Discover the world's<br/> top designers</h1>
+    <p class="subtitle">Explore work from the most talented and accomplished designers<br/>  ready to take on your next project</p>
+
+
+     <input type="search" class="input" placeholder="What are you looking for?" id="search">
+
+    <button class="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <div class="flex-bar">
+        <p class="option">Trending searches</p>
+        <a href="#" class="t">landing page</a>
+        <a href="#" class="t">e-commerce</a>
+        <a href="#" class="t">mobile app</a>
+        <a href="#" class="t">logo design</a>
+        <a href="#" class="t">dashboard</a>
+        <a href="#" class="t">icons</a>
+    <div>
+</body>
+</html>
