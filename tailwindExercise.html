@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind exercise</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      .box {
+        background: linear-gradient(
+          to right,
+          red,
+          blue,
+          brown,
+          green,
+          indigo,
+          yellow,
+          purple,
+          cyan
+        );
+        background-size: 1500%;
+        background-position: 0%;
+        animation-name: stripe;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+
+        clip-path: polygon(0 0, 100% 0, 100% 26%, 0 63%);
+      }
+
+      @keyframes stripe {
+        0% {
+          background-position: 0%;
+        }
+        50% {
+          background-position: 100%;
+        }
+
+        0% {
+          background-position: 0%;
+        }
+      }
+    </style>
+
+    <div class="box cover min-h-screen">
+      <p class="text-white text-xl font-extrabold px-40 py-8">Stripe</p>
+    </div>
+
+    <div class="absolute top-10 left-0 right-0 text-center mt-2">
+      <div class="bg-white shadow-xl w-[40%] mx-auto  rounded-md">
+        <form class="px-5 py-6">
+          <h1 class="text-gray-800 font-bold text-2xl mb-4 text-left">
+            Sign in to your account
+          </h1>
+
+          <div class="space-y-4">
+            <div class="text-left">
+              <label class="text-sm font-medium text-left">Email</label>
+              <input
+                type="email"
+                class="w-full border-1 border-gray-300 rounded-md focus:outline-none focus:border-blue-200 focus:border-4 p-2"
+              />
+            </div>
+
+            <div>
+              <div class="flex justify-between">
+                <label class="text-sm font-medium">Password</label>
+                <a href="#" class="text-sm text-blue-500 hover:text-black"
+                  >Forgot your password?</a
+                >
+              </div>
+              <input
+                type="password"
+                class="w-full border-1 border-gray-300 rounded-md focus:outline-none focus:border-blue-200 focus:border-4 p-2"
+              />
+            </div>
+            <div class="flex gap-1">
+              <input type="checkbox" />
+              <span class="text-sm text-gray-800 cursor-pointer"
+                >Remember me on this device</span
+              >
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-700 text-white p-2.5 text-md rounded-sm cursor-pointer mt-2 hover:bg-gray-800 duration-300"
+          >
+            Sign in
+          </button>
+        </form>
+
+        <div class="flex space-x-2 items-center px-5 mb-4">
+          <hr class="border-gray-300 flex-1" />
+          <span class="text-xs text-gray-500">OR</span>
+          <hr class="border-gray-300 flex-1" />
+        </div>
+
+        <div class="space-y-2 px-5">
+          <button
+            class="w-full items-center border-1 border-gray-300 rounded-md cursor-pointer hover:border-gray-400 duration-100 focus:border-blue-200 focus:border-4 p-2"
+          >
+            <img
+              src="images/google.png"
+              alt="google-image"
+              class="w-3 inline"
+            />
+            <span class="px-1.5 font-medium text-gray-700"
+              >Sign in with Google</span
+            >
+          </button>
+          <button
+            class="w-full items-center border-1 border-gray-300 rounded-md cursor-pointer hover:border-gray-400 duration-100 focus:border-blue-200 focus:border-4 p-2"
+          >
+            <span class="px-1.5 font-medium text-gray-700"
+              >Sign in with passkey</span
+            >
+          </button>
+          <button
+            class="w-full items-center border-1 border-gray-300 rounded-md cursor-pointer hover:border-gray-400 duration-100 focus:border-blue-200 focus:border-4 p-2"
+          >
+            <span class="px-1.5 font-medium text-gray-700"
+              >Sign in with SSO</span
+            >
+          </button>
+        </div>
+
+        <div class="p-1">
+          <p class="mt-12 text-center text-gray-600 w-full bg-gray-100 p-5 rounded-sm">
+          New to stripe?
+          <a href="#" class="text-blue-700 hover:text-black">Create account</a>
+        </p>
+        </div>
+        
+      </div>
+      <!-- <p>hi</p> -->
+       <div class="text-center text-sm my-10">
+          <i class="fa-solid fa-lock px-3"></i>
+          <span class="text-gray-600 font-medium">If you use two-step authentication, <a href="#" class="text-blue-700 hover:text-black">keep your backup codes in a secure place.</a><br> They can help you recover access to your account if you get locked out.</span>
+       </div>
+    </div>
+  </body>
+</html>
